@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     title: 'Kanana Love | Executive Career Strategist',
     description:
       'Helping senior leaders navigate complex transitions and layoffs at an executive level.',
-    url: 'https://kananalove.com',
+    url: 'https://kanana-love.vercel.app/',
     siteName: 'Kanana Love',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://kanana-love.vercel.app/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Kanana Love | Executive Career Strategist',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Kanana Love | Executive Career Strategist',
     description:
       'Strategic career support for senior leaders facing layoffs or transitions.',
-    images: ['/og-image.png'],
+    images: ['https://kanana-love.vercel.app/og-image.png'],
   },
   robots: {
     index: true,
