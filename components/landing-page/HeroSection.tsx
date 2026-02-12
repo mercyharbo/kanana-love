@@ -99,12 +99,12 @@ export function HeroSection() {
             </div>
             <div className='flex flex-col gap-2'>
               <p className='text-foreground/80 italic text-pretty'>
-                "Kanana’s expertise in highlighting key strengths and
-                achievements, combined with her ability to create a compelling
-                and professional presentation, made all the difference. Her
-                guidance and support throughout the whole process was
-                invaluable, and I’m incredibly grateful to her for my career
-                success."
+                &ldquo;Kanana&rsquo;s expertise in highlighting key strengths
+                and achievements, combined with her ability to create a
+                compelling and professional presentation, made all the
+                difference. Her guidance and support throughout the whole
+                process was invaluable, and I&rsquo;m incredibly grateful to her
+                for my career success.&rdquo;
               </p>
               <p className='text-sm font-semibold text-primary'>
                 — Senior Executive Client
