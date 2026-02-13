@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
 
 export function FAQ() {
@@ -36,7 +37,15 @@ export function FAQ() {
         <div className='space-y-4'>
           <p>It’s structured and finite.</p>
           <p>
-            The exact timeline is confirmed during the private fit conversation
+            The exact timeline is confirmed during the{' '}
+            <Link
+              href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary font-medium hover:underline'
+            >
+              private fit conversation
+            </Link>{' '}
             based on your transition, job search context.
           </p>
           <p>This is not open-ended support.</p>
@@ -68,7 +77,18 @@ export function FAQ() {
       answer: (
         <div className='space-y-2'>
           <p>The engagement is $2,000.</p>
-          <p>Payment options are discussed during the fit conversation.</p>
+          <p>
+            Payment options are discussed during the{' '}
+            <Link
+              href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary font-medium hover:underline'
+            >
+              fit conversation
+            </Link>
+            .
+          </p>
         </div>
       ),
     },

@@ -57,6 +57,8 @@ export const metadata: Metadata = {
   },
 }
 
+import { MouseGlow } from '@/components/ui/mouse-glow'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +69,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MouseGlow />
         <Header />
         {children}
         <Footer />

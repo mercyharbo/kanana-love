@@ -12,9 +12,9 @@ export default function Home() {
       <HeroSection />
       <SuccessStories />
       <OfferSection />
-      <LeadMagnet />
       <FounderSection />
       <TrustedBy />
+      <LeadMagnet />
       <FAQ />
     </main>
   )

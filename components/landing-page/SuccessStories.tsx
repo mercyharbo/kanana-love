@@ -1,10 +1,18 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Play } from 'lucide-react'
+import { motion, Variants } from 'framer-motion'
+import NextImage from 'next/image'
 
 export function SuccessStories() {
-  const containerVariants = {
+  const screenshots = [
+    '/screenshot (1).jpeg',
+    '/screenshot (2).jpeg',
+    '/screenshot (3).jpeg',
+    '/screenshot (4).jpeg',
+    '/screenshot (5).jpeg',
+  ]
+
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -14,53 +22,74 @@ export function SuccessStories() {
     },
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: 20 },
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
-      scale: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
+        ease: 'easeOut',
       },
     },
   }
 
   return (
-    <section className='py-24 px-6 sm:px-12 md:px-24 bg-background'>
-      <div className='max-w-7xl mx-auto flex flex-col gap-12'>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className='text-3xl md:text-4xl font-sans font-medium text-center text-balance'
-        >
-          Senior Leaders Who Have Navigated Transition and Layoff Successfully
-        </motion.h2>
+    <section
+      id='success'
+      className='py-24 px-6 sm:px-12 md:px-24 bg-background'
+    >
+      <div className='max-w-7xl mx-auto flex flex-col gap-16'>
+        <div className='max-w-3xl mx-auto text-center space-y-4'>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='text-3xl md:text-5xl font-serif font-bold text-balance leading-tight'
+          >
+            Senior Leaders Who Have <br className='hidden md:block' />
+            <span className='text-primary'>
+              Navigated Transition Successfully
+            </span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className='text-lg text-muted-foreground'
+          >
+            Real feedback from executives who regained clarity and signal in
+            their job search.
+          </motion.p>
+        </div>
 
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, margin: '-100px' }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'
+          className='grid grid-cols-1 md:grid-cols-2 gap-8'
         >
-          {[1, 2, 3, 4].map((i) => (
+          {screenshots.map((src, i) => (
             <motion.div
-              key={i}
+              key={src}
               variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className='group relative aspect-video bg-muted rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-md transition-shadow cursor-pointer flex items-center justify-center'
+              whileHover={{ y: -8 }}
+              className={`relative border border-border shadow-xl shadow-primary/5 transition-all duration-500 group ${
+                i === 4 ? 'md:col-span-2' : ''
+              }`}
             >
-              <div className='absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors' />
-              <div className='size-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg z-10 group-hover:scale-110 transition-transform'>
-                <Play
-                  className='size-5 text-primary ml-1'
-                  fill='currentColor'
+              <div className='relative w-full h-full aspect-4/3 md:aspect-auto min-h-[300px] md:min-h-[400px]'>
+                <NextImage
+                  src={src}
+                  alt={`Success Story ${i + 1}`}
+                  fill
+                  className='object-contain transition-transform duration-700'
                 />
+                <div className='absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
               </div>
-              <span className='sr-only'>Play Video Testimonial {i}</span>
             </motion.div>
           ))}
         </motion.div>

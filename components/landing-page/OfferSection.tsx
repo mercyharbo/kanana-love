@@ -4,10 +4,14 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
 
 export function OfferSection() {
   return (
-    <section className='py-24 px-6 sm:px-12 md:px-24 bg-primary text-primary-foreground'>
+    <section
+      id='offer'
+      className='py-24 px-6 sm:px-12 md:px-24 bg-primary text-primary-foreground'
+    >
       <div className='max-w-4xl mx-auto flex flex-col gap-16'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,7 +60,7 @@ export function OfferSection() {
                     {[
                       'Restoring signal',
                       'Clarifying direction',
-                      'Moving through transition deliberately',
+                      'Moving through transition, layoff deliberately',
                     ].map((item, i) => (
                       <motion.li
                         key={item}
@@ -86,8 +90,17 @@ export function OfferSection() {
                   </p>
                   <p className='text-4xl font-bold text-primary'>$2,000</p>
                 </div>
-                <Button className='w-full rounded-xl font-medium transition-all hover:scale-105 active:scale-95 h-auto py-4 px-6 text-balance'>
-                  Start with a private fit conversation
+                <Button
+                  asChild
+                  className='w-full rounded-xl font-medium transition-all hover:scale-105 active:scale-95 h-auto py-4 px-6 text-balance'
+                >
+                  <Link
+                    href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Start with a private fit conversation
+                  </Link>
                 </Button>
               </div>
             </div>

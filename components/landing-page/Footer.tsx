@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -21,19 +23,28 @@ export function Footer() {
             </h4>
             <ul className='flex flex-col gap-3 text-sm text-muted-foreground'>
               <li>
-                <a href='#' className='hover:text-primary transition-colors'>
+                <Link
+                  href='#offer'
+                  className='hover:text-primary transition-colors'
+                >
                   Job Search Support
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='hover:text-primary transition-colors'>
+                <Link
+                  href='#assessment'
+                  className='hover:text-primary transition-colors'
+                >
                   Self-Assessment
-                </a>
+                </Link>
               </li>
               <li>
-                <a href='#' className='hover:text-primary transition-colors'>
+                <Link
+                  href='#success'
+                  className='hover:text-primary transition-colors'
+                >
                   Success Stories
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -44,22 +55,22 @@ export function Footer() {
             </h4>
             <ul className='flex flex-col gap-3 text-sm text-muted-foreground'>
               <li>
-                <a href='#' className='hover:text-primary transition-colors'>
+                <Link
+                  href='#about'
+                  className='hover:text-primary transition-colors'
+                >
                   About Kanana
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href='mailto:hello@kananalove.com'
+                <Link
+                  href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                  target='_blank'
+                  rel='noopener noreferrer'
                   className='hover:text-primary transition-colors'
                 >
                   Contact
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-primary transition-colors'>
-                  Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

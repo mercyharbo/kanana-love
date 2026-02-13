@@ -1,26 +1,35 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
+import NextImage from 'next/image'
 
 export function TrustedBy() {
-  const containerVariants = {
+  const logos = Array.from({ length: 20 }, (_, i) => `/logo (${i + 1}).jpeg`)
+
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0 },
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
   }
 
   return (
     <section className='py-24 px-6 sm:px-12 md:px-24 bg-background border-t border-border'>
-      <div className='max-w-4xl mx-auto flex flex-col gap-16 text-center'>
+      <div className='max-w-6xl mx-auto flex flex-col gap-16 text-center'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,46 +51,28 @@ export function TrustedBy() {
           </p>
         </motion.div>
 
-        {/* Logos Placeholder */}
+        {/* Logos Grid */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-          className='grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500'
+          className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-700 items-center'
         >
-          {/* Replace with actual logos */}
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+          {logos.map((src, i) => (
             <motion.div
-              key={i}
+              key={src}
               variants={itemVariants}
-              className='h-12 bg-muted/50 rounded flex items-center justify-center text-xs text-muted-foreground/50 font-mono'
+              className='relative h-12 w-full flex items-center justify-center'
             >
-              LOGO {i}
+              <NextImage
+                src={src}
+                alt={`Partner Logo ${i + 1}`}
+                fill
+                className='object-contain'
+              />
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className='max-w-2xl mx-auto bg-primary/5 border border-primary/10 rounded-2xl p-8 space-y-4'
-        >
-          <h2 className='font-semibold text-primary'>
-            A subtle note on fit and timing
-          </h2>
-          <p className='text-sm text-foreground/80'>
-            This work is intentionally one-to-one, and designed for leaders
-            ready to move with clarity.
-          </p>
-          <p className='text-sm text-foreground/80'>
-            If you’re still exploring options, this may not be the right moment.
-            <br />
-            If you’re ready to proceed deliberately, the next step is a private
-            fit conversation.
-          </p>
         </motion.div>
       </div>
     </section>
