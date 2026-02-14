@@ -58,7 +58,7 @@ export function LeadMagnet() {
                   If you&rsquo;re ready to proceed deliberately, the next step
                   is a
                   <Link
-                    href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                    href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='text-primary font-bold hover:underline decoration-primary/40 underline-offset-4 transition-all ml-1 inline-flex items-center gap-1'
@@ -156,7 +156,7 @@ export function LeadMagnet() {
                     className='w-full bg-white text-primary hover:bg-white hover:shadow-2xl hover:shadow-white/20 rounded-2xl h-16 text-xl font-bold flex items-center justify-center gap-4 transition-all duration-300'
                   >
                     <Link
-                      href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                      href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
                       target='_blank'
                       rel='noopener noreferrer'
                     >

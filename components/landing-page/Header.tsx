@@ -33,7 +33,7 @@ export function Header() {
         <nav className='hidden md:flex items-center gap-8'>
           <Button asChild className='px-5 py-2.5 h-11 rounded-full'>
             <Link
-              href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+              href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -45,7 +45,7 @@ export function Header() {
         {/* Mobile Button Only */}
         <Button asChild size='sm' className='md:hidden h-11 rounded-full'>
           <Link
-            href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+            href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
             target='_blank'
             rel='noopener noreferrer'
           >

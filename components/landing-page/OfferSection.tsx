@@ -95,7 +95,7 @@ export function OfferSection() {
                   className='w-full rounded-xl font-medium transition-all hover:scale-105 active:scale-95 h-auto py-4 px-6 text-balance'
                 >
                   <Link
-                    href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                    href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
                     target='_blank'
                     rel='noopener noreferrer'
                   >

@@ -39,7 +39,7 @@ export function FAQ() {
           <p>
             The exact timeline is confirmed during the{' '}
             <Link
-              href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+              href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary font-medium hover:underline'
@@ -80,7 +80,7 @@ export function FAQ() {
           <p>
             Payment options are discussed during the{' '}
             <Link
-              href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+              href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary font-medium hover:underline'

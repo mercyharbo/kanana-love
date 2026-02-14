@@ -22,17 +22,17 @@ export function HeroSection() {
   }
 
   return (
-    <section className='relative overflow-hidden pt-40 pb-32 px-6 sm:px-12 md:px-24 bg-primary/10'>
+    <section className='relative overflow-hidden pt-60 pb-32 px-6 sm:px-12 md:px-24 bg-primary/10'>
       <ScrollReveal variant='fade' duration={1.2}>
-        <div className='max-w-6xl mx-auto text-center flex flex-col gap-7 relative'>
+        <div className='max-w-7xl mx-auto text-center flex flex-col gap-7 relative'>
           <motion.h1
             variants={itemVariants}
-            className='text-4xl md:text-5xl lg:text-6xl font-sans font-medium text-foreground '
+            className='text-4xl/tight md:text-5xl/tight lg:text-6xl/tight font-sans font-medium text-foreground '
           >
-            If you’re a VP or senior leader in transition or facing a layoff,
+            If you’re a VP or mid-senior leader facing a layoff or transition,
             <br className='hidden md:block' />
             <span className='text-primary block mt-2'>
-              your problem isn’t the market.
+              Your problem is not the job market.
             </span>
           </motion.h1>
 
@@ -40,9 +40,9 @@ export function HeroSection() {
             variants={itemVariants}
             className='text-base md:text-2xl text-muted-foreground text-balance'
           >
-            It’s that your experience no longer explains itself.
-            <br />
-            Handle your next move at an executive level.
+            It’s that your experience no longer explains itself. And applying to
+            more jobs is not the solution. Handle your next move at an executive
+            level.
           </motion.p>
 
           <motion.div
@@ -55,7 +55,7 @@ export function HeroSection() {
               className='rounded-full px-8 py-6 text-lg font-medium transition-all hover:scale-105 active:scale-95'
             >
               <NextLink
-                href='https://calendly.com/kananaloveresumes/resume-cover-letter-linkedin-revamp?preview_source=et_card&month=2024-12&date=2024-12-30'
+                href='https://calendly.com/kananaloveresumes/executive-transition-fit-conversation/2026-02-14T09:00:00-06:00'
                 target='_blank'
                 rel='noopener noreferrer'
               >
